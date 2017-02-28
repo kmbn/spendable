@@ -2,12 +2,19 @@
 {% block page_content %}
 
     <div class="page-header">
-        <h1>€{{ report.remaining|decimate }} left this
-        {% if budget.type == 'weekly' %}
+        <h1>
+        {% if budget.type == None %}
+            <a class="btn btn-default" href="{{ url_for('main.create_budget', _external=True) }}">Create a Budget</a>
+
+        {% else %}
+            €{{ report.remaining|decimate }} left</br>this
+            {% if budget.type == 'weekly' %}
             week
-        {% elif budget.type == 'monthly' %}
+            {% elif budget.type == 'monthly' %}
             month
-        {% endif %}</h1>
+            {% endif %}
+        {% endif %}
+        </h1>
         <p style="font-size: 1.5em; text-align:center">(Balance: €{{ report.balance|decimate }})</p>
     </div>
 
