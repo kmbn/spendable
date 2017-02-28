@@ -1,0 +1,121 @@
+h1              { font-size: 6rem;
+                  text-align: center;
+                  font-family: 'futura-pt',Futura,'Open Sans',sans-serif;
+                  font-weight: 800;
+                  color: #383636;
+                  text-transform: uppercase;
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                }
+
+h2              { font-family: 'futura-pt',Futura,'Open Sans',sans-serif;
+                  color: #383636;
+                }
+
+p               { font-size: 2rem;
+                  color: #383636;
+                  font-family: 'ff-meta-serif-sc-web-pro',Georgia,'EB Garamond', serif;
+                }
+
+body            { background-color:
+                }
+
+.form           { padding-bottom: 5px;
+                  border-bottom: 1px solid #eee;
+                  margin-bottom: 10px;
+                }
+
+.message        { font-size: 1.8rem;
+                  font-family: 'ff-meta-serif-sc-web-pro',Georgia,'EB Garamond', serif;
+                 }
+
+.alert-info     { margin-bottom: 0px;
+                }
+
+.navbar-inverse { border-radius: 0 !important;
+                  -webkit-border-radius: 0 !important;
+                  -moz-border-radius: 0 !important;
+                  background-color: #383636;
+                  margin-bottom: 10px;
+                }
+
+.navbar-brand   { font-size: 2.3rem;
+                  font-family: 'futura-pt',Futura,'Open Sans',sans-serif;
+                  color: #AAAAAA;
+                }
+
+.navbar-nav     { font-size: 1.8rem;
+                  font-family: 'futura-pt',Futura,'Open Sans',sans-serif;
+                  color: #AAAAAA;
+                }
+
+.navbar-footer  { font-size: 1.5rem;
+                  color: #AAAAAA;
+                  font-family: 'ff-meta-serif-sc-web-pro',Georgia,'EB Garamond',serif;
+                  font-variant: small-caps;
+                }
+
+.page-header    { margin-top: 10px;
+                  margin-bottom: 20px;
+                  padding-bottom: 5px;
+                }
+
+.control-label  { font-size: 1.8rem;
+                  color: #383636;
+                  font-family: 'futura-pt',Futura,'Open Sans',sans-serif;
+                }
+
+.form-control   { font-size: 2rem;
+                  color: #383636;
+                  font-family: 'ff-meta-serif-sc-web-pro',Georgia,'EB Garamond',serif;
+                  outline: none; outline-style: none;
+                  background:white; border:0px solid #ccc;
+                  border-bottom: 3px solid #383636;
+                  border-radius: 0 !important;
+                  -webkit-border-radius: 0 !important;
+                  -moz-border-radius: 0 !important;
+                }
+
+.btn-default    { font-size: 1.8rem;
+                  color: #383636;
+                  font-family: 'futura-pt',Futura,'Open Sans',sans-serif;
+                }
+
+.modal-footer   { margin-top: 50px;
+                  border: none;
+                }
+
+.alert-info     { font-family: 'ff-meta-serif-sc-web-pro',Georgia,'EB Garamond', serif;
+                }
+
+.right-link     { float: right;
+                  text-align: right;
+                }
+#placeholder    { opacity: 0;
+                  visibility: hidden;
+                }
+
+@media (min-width: 992px) {.container-content { width: 750px;}}
+
+/*------------------------------------------------------------------------*/
+/* Make footer appear at bottom of screen if there's not a lot of content */
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+#content {
+    padding-bottom:100px; /* Height of the footer element */
+}
+#footer {
+    width:100%;
+    height:100px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}

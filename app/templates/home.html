@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+    <div class="page-header">
+        <h1>€{{ report.remaining|decimate }} left this
+        {% if budget.type == 'weekly' %}
+            week
+        {% elif budget.type == 'monthly' %}
+            month
+        {% endif %}</h1>
+        <p style="font-size: 1.5em; text-align:center">(Balance: €{{ report.balance|decimate }})</p>
+    </div>
+
+    <div>
+        <p>Spending today: €{{ report.daily_outflow|decimate }}</p>
+        <p>This week: €{{ report.weekly_outflow|decimate }}</p>
+        <p>This month: €{{ report.monthly_outflow|decimate }}</p>
+    </div>
+
+    <div>
+        <h2 style="text-align:center">Add a Transaction</h2>
+        {{ wtf.quick_form(form) }}
+    </div>
+
+{% endblock %}
