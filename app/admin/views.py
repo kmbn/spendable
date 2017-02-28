@@ -3,7 +3,6 @@ from flask import Flask, session, redirect, url_for, render_template, flash, \
 import ujson
 from app.db import *
 from . import admin
-from .forms import RenameChronofileForm, RenameAuthorForm
 from app.decorators import login_required
 
 
