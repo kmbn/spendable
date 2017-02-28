@@ -13,6 +13,7 @@ from app.mail import send_email
 from app.decorators import login_required
 from .models import user_is_registered, get_user_id, update_by_eid, \
     create_user
+from app.main.models import Budget
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -59,9 +60,8 @@ def register():
         password_hash = pwd_context.hash(form.password.data)
         # Create account and get creator id
         creator_id = create_user(form.email.data, password_hash)
-        # Create site details
-        # Create empty pagination table
-        insert_record('pagination', {'page': 1, 'transactions': None})
+        # Create empty budget
+        Budget(None, None).add()
         flash('Registration successful. You can login now.')
         return redirect(url_for('auth.login'))
 

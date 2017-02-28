@@ -139,16 +139,20 @@ def create_budget():
     Display and process form for creating budget.
     """
 
+    budget = Budget.view()
+    if budget.type != None:
+        return redirect(url_for('main.edit_budget'))
+
     form = CreateBudgetForm()
 
     if form.validate_on_submit():
         amount = float(form.amount.data)
         budget = Budget(form.budget_type.data, amount)
-        budget.add()
+        budget.update()
         flash('Budget created.')
         return redirect(url_for('main.home'))
 
-    return render_template('edit_budget.html', form=form)
+    return render_template('create_budget.html', form=form)
 
 
 @main.route('report/<date>')
